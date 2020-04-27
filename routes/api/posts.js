@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { getRoute } = require('../controllers/users');
 
-router.route('/').get(getRoute);
-
+router.get('/', (req, res) => {
+  res.send('user posts route');
+});
 module.exports = router;

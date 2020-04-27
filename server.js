@@ -3,14 +3,15 @@ const connectDB = require('./config/db');
 const app = express();
 
 //Load Routes
-const usersRoutes = require('./routes/users');
-const authRoutes = require('./routes/auth');
-const postsRoutes = require('./routes/posts');
-const profileRoutes = require('./routes/profile');
+const usersRoutes = require('./routes/api/users');
+const authRoutes = require('./routes/api/auth');
+const postsRoutes = require('./routes/api/posts');
+const profileRoutes = require('./routes/api/profile');
 
 //Connect Database
 connectDB();
-
+//Init body parser middleware
+app.use(express.json({ extended: false }));
 // Routes for users, auth, posts, profile
 app.use('/api/users', usersRoutes);
 app.use('/api/auth', authRoutes);

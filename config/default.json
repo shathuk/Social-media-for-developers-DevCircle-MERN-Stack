@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://shathu:sathu1995@shathumdb-uwmaz.mongodb.net/DevCircle?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://shathu:sathu1995@shathumdb-uwmaz.mongodb.net/DevCircle?retryWrites=true&w=majority",
+  "jwtSecret": "myjwtsecrettocken"
 }
